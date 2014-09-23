@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head lang="es">
+	<meta charset="UTF-8" />
+	<title>Principal | Gab2me</title>
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/grillas.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+	<style type="text/css">@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);</style>
+</head>
+<body class="container16">
+	<header class="row" >
+		<div class="column16">
+			<figure style="width: 100px">
+				<a href="/"><img src="/static/img/logo.png" /></a>
+			</figure>
+			<div class="sesion row">
+				<span id="txt_note">¿Aún no tienes una cuenta?</span>
+				<input type="button" value="Regístrate" id="registrar" class="btn-naranja"/>
+			</div>
+		</div>
+	</header>
+	<section class="row" id="banner">
+		<div class="column16">
+			<h2>Pregunta lo que quieras, responde lo que sepas</h2>
+			<div id="caja" class="column15">
+				<div class="login">
+					<div class="inicio" id="login">
+						<input type="text" name="username" id="username" placeholder="Nombre de usuario" />
+						<input type="password" name="password" id="password" placeholder="Contraseña" />
+						<span class="icon-checkmark-circle"></span>
+						<input type="button" value="Entrar" />
+					</div>
+					<div class="oculto" id="signup">
+						<input type="text" name="rusername" id="rusername" placeholder="Nombre de usuario" />
+						<input type="email" name="email" id="email" placeholder="Correo electrónico" />
+						<input type="password" name="rpassword" id="rpassword" placeholder="Contraseña" />
+						<span class="icon-checkmark-circle"></span>
+						<input type="button" value="Regístrar" id="formRegistrar" />
+					</div>
+				</div>
+			</div>
+			<div class="aviso column15">
+				<p>Al unirte a Gab2me, aceptas nuestros Términos de servio.</p>
+				<a href="#api-facebook" >
+					<span class="icon-facebook2"></span>
+					Regístrate con Facebook
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="row">
+		<div class="column16" id="principal" style="background-color: transparent">
+			<figure class="human">
+				<img src="/static/img/man_conect_2.png" />
+			</figure>
+			<h4>Mira quién está aquí</h4>
+		</div>
+	</section>
+	<section class="row" id="barra">
+		<div class="column16">
+			<div class="rowUsers">
+				{TOP_USUARIOS}
+			</div>
+		</div>
+	</section>
+	<section class="row">
+		<div class="column16" id="contenido">
+			<h2>¿Qué es Gab2me?</h2>
+			<div class="column14">
+				<div class="video">
+					<iframe src="//player.vimeo.com/video/104436803?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="730" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="row">
+		<div class="column16">
+			<ul>
+				<!--Paginas-->
+				<li><a href="/paginas/id_page">title</a></li>
+				<!--Paginas-->
+				<li><sup>&copy;</sup>Gab2me 2014</li>
+			</ul>
+			<div class="social">
+				<figure>
+					<img src="/static/img/logo.png" />
+				</figure>
+				<ul>
+					<li >
+						<a href="http://facebook.com/" target="_blank" class="fb"><span class="icon-facebook" ></span></a>
+					</li>
+					<li>
+						<a href="http://twitter.com/" target="_blank" class="tw"><span class="icon-twitter" ></span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="/static/js/vendor/jquery.js"></script>
+	<script type="text/javascript" src="/static/js/main.js"></script>
+</body>
+</html>

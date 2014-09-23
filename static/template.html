@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head lang="es">
+	<meta charset="UTF-8" />
+	<title>{TITLE}</title>
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, width=device-width" />
+	<link rel="shortcut icon" href="/static/img/icono_logo.png" />
+	<link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/grillas.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+	<style type="text/css">@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);</style>
+</head>
+<body class="container16">
+	<header class="row" >
+		<div class="column16">
+			<figure>
+				<img src="/static/img/icono_logo.png" />
+			</figure>
+			<div class="buscador row">
+				<input type="search" placeholder="Busca usuarios, respuestas o temas" id="buscador"/>
+				<span class="icon-detalles" ></span>
+			</div>
+			<div class="acciones">
+				<nav>
+					<ul>
+						<li class="activo"><span class="icon-notebook" ></span></li>
+						<li><span class="icon-bell2" ></span><sup><span class="red">2</span></sup></li>
+						<li><span class="icon-cog" ></span></li>
+						<li><span class="icon-lista" ></span></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+<!-- De aquí contenedor -->
+	{CONTENIDO}
+	<footer class="row">
+		<div class="column16">
+			<ul>
+				{PAGINAS}
+				<li><sup>&copy;</sup>Gab2me 2014</li>
+			</ul>
+			<div class="social">
+				<figure>
+					<img src="/static/img/logo.png" />
+				</figure>
+				<ul>
+					<li >
+						<a href="http://facebook.com/" target="_blank" class="fb"><span class="icon-facebook" ></span></a>
+					</li>
+					<li>
+						<a href="http://twitter.com/" target="_blank" class="tw"><span class="icon-twitter" ></span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="/static/js/vendor/jquery.js"></script>
+	<script type="text/javascript" src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!--Perfil-->
+	<section class="row" id="ban_principal">
+		<div class="column16">
+			<figure class="cover">
+				<img src="/static/img/covers/{COVER}" />
+			</figure>
+		</div>
+	</section>
+	<section class="row" id="detalles">
+		<div class="cabeza_dos">
+			<div class="avatar">
+				<img src="/static/img/avatars/{AVATAR}" />
+			</div>
+			<div class="desc">
+				<h3>{NAME}</h3>
+				<p><strong>{CITY}</strong><br />
+					{DESC}</p>
+			</div>
+<!--Perfil-->
+			<div class="stats">
+				<ul>
+					<li>
+						<span class="circulo">
+							<span class="icon-github"></span>
+							<span class="number">{FOLLOWERS}</span>
+						</span>
+					</li>
+					<li>
+						<span class="circulo">
+							<span class="icon-heart"></span>
+							<span class="number">100</span>
+						</span>
+					</li>
+					<li>
+						<span class="circulo">
+							<span class="icon-bell2"></span>
+							<span class="number">{PREGUNTAS}</span>
+						</span>
+					</li>
+				</ul>
+				<div class="buttons">
+					<input type="button" value="Preguntar" id="ask" class="disableP" />
+					<input type="button" value="Chatear" id="sendChat" class="activeP" />
+				</div>
+			</div>
+		</div>
+	</section>
+<!--Caja Pregunta-->
+	<div class="iframeChat" id="pregunta">
+	<section class="row">
+		<div class="column16" id="cajaAcciones">
+			<input type="text" name="pregunta" id="pregunta" placeholder="Haz tu pregunta a @jok3rcit0" />
+			<input type="button" value="Preguntar" class="btn-naranja" />
+		</div>
+		<div class="dataPregunta">
+			<p>300 caracteres</p>
+			<input type="checkbox" value='1' name="anonimo" id="anonimo" style="display:none">
+			<span class="icon-checkbox-unchecked check" id="icon-check"></span>
+			<span style="margin-top: -6px">¿Preguntar Anónimamente?</span>
+		</div>
+	</section>
+	</div>
+<!--Caja Pregunta-->
+
+<!--Caja chat-->
+	<div class="iframeChat oculto" id="chateo">
+	<section class="row">
+		<div class="column16" id="cajaAcciones">
+			<input type="text" name="pregunta" id="pregunta" placeholder="Chatea con @jok3rcit0" />
+			<span class="icon-bubbles2 chat_buble"></span>
+		</div>
+	</section>
+	<section class="row">
+		<div class="column16">
+			<ul class="contentChat">
+				<li class="desactivado">@pekchan<sup>x</sup></li>
+				<li class="desactivado">@matias<sup>x</sup></li>
+				<li class="desactivado">@duljim<sup>x</sup></li>
+				<li class="desactivado">@jok3rcit0<sup>x</sup></li>
+				<li class="desactivado">@donTacho<sup>x</sup></li>
+				<li class="desactivado">@matias<sup>x</sup></li>
+				<li class="desactivado">@duljim<sup>x</sup></li>
+				<li class="desactivado">@donTacho<sup>x</sup></li>
+			</ul>
+			<div id="conversation">
+				<a href="/user/usuario?id=2" target="_blank">@pekchan:</a> Hola, que haces?<br />
+				<strong>@jok3r:</strong> Que onda crack.<br />
+				<a href="/user/usuario?id=2" target="_blank">@pekchan:</a> Hola, que haces?<br />
+				<strong>@jok3r:</strong> Que onda crack.<br />
+				<a href="/user/usuario?id=2" target="_blank">@pekchan:</a> Hola, que haces?<br />
+				<strong>@jok3r:</strong> Que onda crack.<br />
+				<a href="/user/usuario?id=2" target="_blank">@pekchan:</a> Hola, que haces?<br />
+				<strong>@jok3r:</strong> Que onda crack.<br />
+
+			</div>
+		</div>
+	</section>
+	</div>
+<!--Caja chat-->
+
+<!--Caja Pregunta-->
+	<section class="row" id="barra_dos">
+		<div class="column16">
+			<h4>¡Preguntale a tus amigos!</h4>
+			<div class="rowUsers_dos">
+				{TOP_USUARIOS}
+			</div>
+		</div>
+	</section>
