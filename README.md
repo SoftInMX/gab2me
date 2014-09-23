@@ -1,4 +1,4 @@
 gab2me
 ======
 
-red social combinación de ask.fm y chat rulette
+red social combinación de ask.fm y chatroulette
