@@ -21,12 +21,7 @@
 		}
 
 		public function preguntas(){
-			$idu = (isset($_GET['id'])) ? $_GET['id'] : 3 ; //3 es mi id en la bd 
-			if($idu != 0 && $idu != NULL){
-				$this->user->preguntas($idu);
-			}else{
-				header("Location: /404.html");
-			}	
+			$this->user->preguntas();
 		}
 	}
 ?>

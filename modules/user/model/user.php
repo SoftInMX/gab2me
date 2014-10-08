@@ -45,17 +45,17 @@
 			$this->view->showPerfil($perfil, $preguntas, $siguiendo, $pag, $amg);
 		}
 
-		public function preguntas($idu){
-			$info = $this->userDAO->getDataBasic($idu);
-			$preguntas = $this->userDAO->getPreguntas($idu);
-			$paginas  = $this->userDAO->getFooter();
+		public function preguntas(){
+			//$info = $this->userDAO->getDataBasic($idu);
+			//$preguntas = $this->userDAO->getPreguntas($idu);
+			//$paginas  = $this->userDAO->getFooter();
 
-			$pag = '';
-			foreach ($paginas as $pagina) {
+			//$pag = '';
+			/*foreach ($paginas as $pagina) {
 				$pag .= '<li><a href="/paginas/'.$pagina['id_page'].'">'.$pagina['title'].'</a></li>';
-			}
+			}*/
 			
-			$this->view->showPreguntas($info, $preguntas, $pag);
+			$this->view->showPreguntas();
 		}
 
 	}

@@ -57,7 +57,7 @@ class userViews{
 
 	public function showPreguntas($info=array(), $preguntas=array(), $pag=''){
 		//$lng = count($perfil);
-		$html = file_get_contents($this->path.'perfil.html');
+		$html = file_get_contents($this->path.'preguntas.html');
 		$usr = '';
 
 		$template = file_get_contents(TEMPLATE);
@@ -75,7 +75,6 @@ class userViews{
 		
 		$content = array(
 			'{TITLE}' 		=> 'Preguntas | Gab2me',
-			'{PAGINAS}'		=> $pag,
 			'{CONTENIDO}' 	=> $html
 		);
 
