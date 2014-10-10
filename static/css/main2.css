@@ -69,10 +69,33 @@ section.side-container{
 	background: #19ba99;
 	border-radius: 3px;
 	color: #fff;
-	display: block;
+	display: inline-block;
 	font-style: italic;
 	padding: 10px;
 	width: 70%;
+}
+
+.social{
+	display: inline-block;
+	float: right;
+	margin: 0;
+	padding: 0;
+	width: 26%;
+}
+
+.social a.icon-facebook, .social a.icon-twitter{
+	color: #fff;
+	font-size: 36px;
+	margin: 0 10px;
+	padding: 0;
+}
+
+.social > li:first-child {
+    padding: 0;
+}
+
+.social > li:last-child{
+	padding: 0;
 }
 
 .question-list-container{
@@ -124,6 +147,7 @@ section.side-container{
 }
 
 .answer-box textarea{
+	border: none;
 	height: 90px !important;
 	width: 90%;
 }
@@ -173,11 +197,25 @@ section.side-container{
 
 .block{
 	background: none repeat scroll 0 0 #bbc0c4;
-	border-radius: 3px;
-	display: block;
-	float: right;
-	padding: 4px;
-	width: 36%;
+    border-radius: 3px;
+    display: block;
+    float: right;
+    font: 300  14px 'Raleway',sans-serif;
+    text-transform: uppercase;
+    padding: 6px;
+    width: 48%;
+}
+
+.block:before{
+	border: 2px solid #ee4b42;
+ 	border-radius: 10px;
+	color: #ee4b42;
+	content: "X";
+	display: inline-block;
+	font-weight: bold;
+	height: 16px;
+	margin-right: 4px;
+	width: 16px;
 }
 
 .bot-blue{
@@ -186,8 +224,10 @@ section.side-container{
 	clear: both;
 	display: block;
 	float: right;
+	font: 15px 'Raleway',sans-serif;
+	text-transform: uppercase;
 	margin-top: 10px;
-	padding: 10px 5px;
+	padding: 14px 8px;
 	width: 50%;
 }
 
@@ -200,7 +240,7 @@ section.side-container{
     border-radius: 3px;
     color: #fff;
     display: block;
-    font: 16px icomoon;
+    font: 16px 'Raleway',sans-serif;
     float: right;
     padding: 12px 5px;
     text-align: center;
