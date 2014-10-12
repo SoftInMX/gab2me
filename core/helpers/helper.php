@@ -1,7 +1,4 @@
 <?php
-/**
-* Helpers D= 
-*/
 class helper
 {
 	
