@@ -23,13 +23,55 @@
 	<section class="side-container">
 	
 		<div class="general-head">
+			
 			<h3>Configuración</h3>
+				
+			<div class="profile-setting">
+			
+				<img src="img/logo.png" />
+				<a href="#" class="profile-url">Cambie su foto de perfil</a>
+				<span class="min-gray-txt">Max size</span>
+				<span class="min-blue-txt">¿No puede subir la foto?</span>
+				
+			</div>	
+				
 		</div>
-	
+		
 		<div id="configuration-container">
 		
-			<checkbox></checkbox>Permitir preguntas anónimas
-			
+			<form id="config" class="form-style">
+				
+				<input type="checkbox" class="check-anonim" name="anonim" value="anonim">Permitir preguntas anónimas
+				
+				<div class="divisor"></div>
+				
+				<input type="text" name="nombre" placeholder="Nombre">
+				
+				<input type="text" name="apellido" placeholder="Apellido">
+				
+				<select class="form-options">
+					<option value="sexo">Sexo</option>
+					<option value="hombre">Hombre</option>
+					<option value="mujer">Mujer</option>
+				</select>
+				
+				<div class="divisor"></div>
+		      	
+				<textarea placeholder="Escribe tu minibiografía"></textarea>
+				
+				<div class="divisor"></div>
+				
+				<select class="form-options">
+					<option value="sexo">Seleccione su ciudad</option>
+				  <option value="ciudad-1">Ciudad 1</option>
+				  <option value="ciudad-2">Ciudad 2</option>
+				</select>
+				
+				<div class="divisor"></div>
+				
+				<button class="bot-red left">Guardar</button>
+				
+			</form>
 			
 		
 		</div>
