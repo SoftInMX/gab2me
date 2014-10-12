@@ -75,7 +75,7 @@ section.side-container{
 	width: 70%;
 }
 
-.social{
+.sociald{
 	display: inline-block;
 	float: right;
 	margin: 0;
@@ -83,18 +83,18 @@ section.side-container{
 	width: 26%;
 }
 
-.social a.icon-facebook, .social a.icon-twitter{
+.sociald a.icon-facebook, .sociald a.icon-twitter{
 	color: #fff;
 	font-size: 36px;
 	margin: 0 10px;
 	padding: 0;
 }
 
-.social > li:first-child {
+.sociald > li:first-child {
     padding: 0;
 }
 
-.social > li:last-child{
+.sociald > li:last-child{
 	padding: 0;
 }
 
