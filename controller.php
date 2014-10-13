@@ -1,6 +1,19 @@
 <?php
 require_once('core/settings.php');
+	
+	$pval = array_values($_POST);
+	$pkey = array_keys($_POST);
+	$gval = array_values($_GET);
+	$gkey = array_keys($_GET);
 
+	for ($i=0,$t=count($pkey); $i < $t; $i++) {
+		$_POST["$pkey[$i]"] = helper::sanitize($pval[$i]);
+	}
+	
+	for ($i=0,$t=count($gkey); $i < $t; $i++) {
+		$_GET["$gkey[$i]"] = helper::sanitize($gval[$i]);
+	}
+	
 	if(isset($_GET['modulo']) && !isset($_GET['action'])){
 		$modulo = './modules/' . $_GET['modulo'] . '/controller/' . $_GET['modulo'] . 'Controller.php';
 		if(is_file($modulo)){
