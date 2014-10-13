@@ -59,12 +59,11 @@ class userDAO {
 	
 	public function checkMail($mail){
 		$response = false;
-		$sql = "SELECT id_datos 
-				FROM  pf_acceso 
-				WHERE correo = '$mail'  
+		$sql = "SELECT email
+				FROM  g2m_user
+				WHERE email = '$mail'  
 				LIMIT 1";
 		$u = $this->mysqli->query($sql);
-		
 		if($u){
 			if($u->num_rows > 0){
 				$response = true;
@@ -72,6 +71,30 @@ class userDAO {
 		}
 		
 		return $response;
+	}
+
+	public function registrar($user, $email, $clave){
+		$res['estatus'] = 'false';
+		$this->userDAO = new userDAO();
+		$vm = $this->userDAO->checkMail($email);
+		if(!$vm){
+			$q = "INSERT INTO g2m_user VALUES(NULL, 0, '$user', '$email', md5('$clave'), 'avatar_default.png', 0)";
+			$v = $this->mysqli->query($q);
+			if($v){
+				$idu = $this->mysqli->insert_id;
+				$q = "INSERT INTO g2m_profile VALUES(NULL, $idu, 'default.jpg', '#Nombre', '', '', 'Aquí coloca una breve descripción tuya, <br /> &nbsp;', 'Tu localidad')";
+				$v = $this->mysqli->query($q);
+				if($v){
+					$res['estatus'] = 'true';
+				}
+			}else{
+				$res['estatus'] = 'false';
+			}
+		}else{
+			$res['estatus'] = 'badMail';
+		}
+
+		return $res;
 	}
 	
 	public function resetPass($m,$pass){
@@ -86,45 +109,6 @@ class userDAO {
 		}
 		
 		return $response;
-	}
-
-	public function registrar($username, $password, $email){
-		$res = array();
-		$res['estatus'] = 'no';
-
-		//Valida mail
-		$q0 = "SELECT usuario FROM roll_usuario WHERE usuario = '$username' ";
-		$v = $this->mysqli->query($q0);
-
-		if($v){
-			if($v->num_rows > 0){
-				$res['estatus'] = 'badUsuario';
-			}
-		}
-
-		//Validamos Usuario
-		$q1 = "SELECT correo FROM roll_usuario WHERE correo = '$email' ";
-		$v = $this->mysqli->query($q1);
-		if($v){
-			if($v->num_rows > 0){
-				$res['estatus'] = 'badMail';
-			}
-		}
-
-		//Agregamo Usuario
-		if($res['estatus'] == 'no'){
-			$q = "INSERT INTO roll_usuario VALUES(NULL, '$username', md5('$password'), '$email', '$name', '$lname', '$gender', '$age', '$address', '$city', '$zipcode', '$country')";
-			$v = $this->mysqli->query($q);
-			if($v){
-				$idu = $v->insert_id;
-				$qp = "INSERT INTO roll_preferencias VALUES(NULL, '$tSkate', '$oSkate', '$mproducts', '$store', '$year', '$code', '$model')";
-				$v = $this->mysqli->query($qp);
-				if($v){
-					$res['estatus'] = 'bien';
-				}
-			}
-		}
-		return $res;
 	}
 
 	public function topUsuarios(){

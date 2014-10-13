@@ -41,7 +41,11 @@ $( document ).ready(function(){
 		$('.desactivado').removeClass('activado')
 		$(this).toggleClass("activado");
 	});
+});
 
+//Funciones Funcionales
+
+$( document ).ready(function(){
 	$("#formRegistrar").click(function(){
 		$("#formRegistrar").addClass('disableP');
 		var user = $("#rusername").val();
@@ -51,8 +55,14 @@ $( document ).ready(function(){
 		if(user != '' && mail != '' && pass != ''){
 			$.ajax({
 				type: 'POST',
-				url:  '/user/registar_new',
-				data: {user:user, mail:mail, pass:pass}
+				url:  '/user/registrar',
+				data: {user:user, mail:mail, pass:pass},
+				success: function(response){
+					console.log(response)
+				},
+				error: function(){
+					console.log('Error: '+response);
+				}
 			})
 		}else{
 			alert("Todos los campos son requeridos");
@@ -62,5 +72,4 @@ $( document ).ready(function(){
 			$("#formRegistrar").removeClass('disableP');
 		}, 3000)
 	})
-
-});
+})

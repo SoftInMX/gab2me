@@ -22,6 +22,17 @@
 			$this->view->showHome($user, $paginas);
 		}
 
+		public function registrar($user, $email, $clave){
+			$response = $this->userDAO->registrar($user, $email, $clave);
+			if($response['estatus'] == 'true'){
+				$res = 'registrado';
+			}else{
+				$res = $response['estatus'];
+			}
+
+			echo $res;
+		}
+
 		public function usuario($idu){
 			$perfil 	= $this->userDAO->getPerfil($idu);
 			$preguntas 	= $this->userDAO->numPreguntas($idu);
@@ -56,6 +67,19 @@
 			}*/
 			
 			$this->view->showPreguntas();
+		}
+
+		public function configuracion(){
+			//$info = $this->userDAO->getDataBasic($idu);
+			//$preguntas = $this->userDAO->getPreguntas($idu);
+			//$paginas  = $this->userDAO->getFooter();
+
+			//$pag = '';
+			/*foreach ($paginas as $pagina) {
+				$pag .= '<li><a href="/paginas/'.$pagina['id_page'].'">'.$pagina['title'].'</a></li>';
+			}*/
+			
+			$this->view->showConfiguracion();
 		}
 
 	}
