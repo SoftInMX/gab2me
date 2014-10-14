@@ -171,6 +171,15 @@ section.side-container{
     border-radius: 3px 0 3px 3px;
     clear: both;
     padding: 10px 5px;
+    position: relative;
+}
+
+.answer-box .icon-microphone {
+    bottom: 40px;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    right: 11px;
 }
 
 .answer-box textarea{
