@@ -1,3 +1,48 @@
+/* Notificaciones */
+
+.notification-box {
+    background: rgba(255,255,255,.75);
+    border-radius: 3px;
+    color: #2f4054;
+    font: bold 14px Raleway;
+    padding: 10px!important;
+    position: absolute;
+    width: 16%;
+}
+
+.notification-box > li {
+	border-bottom: 1px solid #2f4054;
+    display: block !important;
+    margin: 0;
+    padding: 4px 0 !important;
+    position: relative;
+    text-align: left;
+}
+
+.notification-box li:after{
+	background: none repeat scroll 0 0 #1fb899;
+   border-radius: 15px;
+   content: "";
+   display: inline-block;
+   float: right;
+   height: 15px;
+   position: absolute;
+   right: 0;
+   top: 14px;
+   width: 15px;
+}
+
+.notification-box li.red:after{
+	background: #e84f41!important;
+}
+
+.notification-box span{
+	display: block;
+	font-weight: 100!important;
+}
+
+/* End */
+
 section.container{
 	margin: 0 auto;
 	max-width: 1000px;
