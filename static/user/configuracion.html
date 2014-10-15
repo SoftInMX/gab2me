@@ -45,31 +45,31 @@
 				
 				<span class="icon-checkbox-unchecked"></span><span class="leyend">Permitir preguntas anónimas</span>
 				
-				<div class="divisor"></div>
-				
-				<input type="text" name="nombre" placeholder="Nombre"> 
-								
-				<input type="text" name="apellido" placeholder="Apellido">
+				<div class="input-container divisor">
+					<input type="text" name="nombre" placeholder="Nombre">
+					<p class="min-gray-txt">Máximo 10 caracteres</p>
+				</div> 
+							
+				<div class="input-container divisor">	
+					<input type="text" name="apellido" placeholder="Apellido">
+					<p class="min-gray-txt">Máximo 10 caracteres</p>
+				</div>
 								
 				<select class="form-options">
 					<option value="sexo">Sexo</option>
 					<option value="hombre">Hombre</option>
 					<option value="mujer">Mujer</option>
 				</select>
-				
-				<div class="divisor"></div>
 		      	
-				<textarea placeholder="Escribe tu minibiografía"></textarea>
+		      	<div class="input-container divisor">
+					<textarea placeholder="Escribe tu minibiografía"></textarea>
+					<p class="min-gray-txt">Máximo 400 caracteres</p>
+				</div>
 				
-				<div class="divisor"></div>
-				
-				<select class="form-options">
-					<option value="sexo">Seleccione su ciudad</option>
-				  <option value="ciudad-1">Ciudad 1</option>
-				  <option value="ciudad-2">Ciudad 2</option>
-				</select>
-				
-				<div class="divisor"></div>
+				<div class="input-container divisor">
+					<input type="text" name="ciudad" placeholder="Ciudad">
+					<p class="min-gray-txt">Ingrese su lugar de residencia</p>
+				</div>
 				
 				<button class="bot-red left">Guardar</button>
 				

@@ -286,13 +286,14 @@ section.side-container{
 }
 
 .divisor{
-	background: #bbc0c4;
-	height: 1px;
-	margin: 20px 0;
-	width: 100%;
+	border-top: 1px solid #bbc0c4;
+    display: block;
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 100%;
 }
 
-#configuration-container{
+#configuration-container, #register-container{
 	padding: 20px 0 0 20px;
 	width: 96%;
 }
@@ -308,11 +309,32 @@ section.side-container{
 	padding-left: 10px;
 }
 
+#register-container .min-gray-txt{
+	margin: 0;
+	padding-bottom: 16px;
+}
+
+#register-container .min-blue-txt{
+	display: inline!important;
+}
+
+.input-container {
+    width: 100%;
+}
+
+.input-container p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
 .form-style input[type="text"] {
 	border:1px solid #bbc0c4;
 	border-radius: 3px;
 	display: block;
 	color: #9c9c9c;
+	display: inline-block;
 	height: 50px;
 	margin: 10px 0;
 	padding-left: 5px;
@@ -334,10 +356,9 @@ textarea{
 	border: 1px solid #bbc0c4;
   	border-radius: 3px;
   	color: #9c9c9c;
-  	display: block;
+  	display: inline-block;
   	font-size: 13px;
   	height: 80px;
-  	margin: 10px 0;
   	padding-left: 5px;
   	width: 40%;
 }
@@ -366,8 +387,48 @@ textarea{
 	width: 100%;
 }
 
-.leyend{
-	
+.register-social {
+    width: 100%;
+}
+
+.register-social ul {
+	margin: 0;
+    text-align: left;
+}
+
+.register-social ul li{
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+.facebook-btn {
+    background: #4461a5;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px !important;
+    text-align: center;
+    width: 15%;
+}
+
+.twitter-btn {
+    background: #5ac2e7;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px !important;
+    text-align: center;
+    width: 15%;
+}
+
+.facebook-btn a, .twitter-btn a{
+	margin: 0;
+	padding: 0;
+}
+
+.inside-btn {
+    font-family: raleway;
+    padding-left: 4px;
 }
 
 .min-gray-txt{
