@@ -2,9 +2,9 @@
 	session_start();
 	
 	# Para accesar a la base de datos
-    const DBHOST = '127.0.0.1';
+	const DBHOST = '127.0.0.1';
 	const DBUSER = 'root';
-	const DBPASS = 'HolaMundo';
+	const DBPASS = 'olamund0';
 	const DBNAME = 'gab2me';
 	const HTML = 'static/';
 	const WEB_RAIZ = '/';
